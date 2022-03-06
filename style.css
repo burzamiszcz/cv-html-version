@@ -10,12 +10,14 @@ body {
     margin: 30px auto 30px auto;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 1em rgba(56, 56, 129, 0.438);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.30)
 }
 
 header {
     background-color: rgb(56, 56, 129);
     color: azure;
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
@@ -127,4 +129,30 @@ footer {
     position: absolute;
     margin: 5px 5px;
     
+}
+
+.cv-download {
+    border: 2px solid black;
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: darkslateblue;
+    border-radius: 15px;
+    margin: 40px 20px 40px 0px;
+    padding: 10px;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 12px;
+}
+
+.cv-download:hover {
+    color:darkslateblue;
+    background-color: whitesmoke;
+    
+}
+
+.cv-download:focus {
+    outline: none;
+    color:darkslateblue;
+    background-color: whitesmoke;
 }
