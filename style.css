@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(224, 220, 220);
+    font-family: 'Montserrat'
+}
+
+.paper-page {
+    background-color: whitesmoke;
+    width: 960px;
+    height: 1300px;
+    margin: 30px auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1em rgba(56, 56, 129, 0.438);
+}
+
+header {
+    background-color: rgb(56, 56, 129);
+    color: azure;
+}
+
+h1 {
+    padding: 40px 20px 40px 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+.left-col {
+    width: 25%;
+    background-color: rgb(228, 226, 226);
+    font-family: 'Calibri Light';
+}
+
+.right-col {
+    width: 75%;
+    color: black;
+    font-family: 'Calibri Light';
+    position: relative;
+}
+
+.profile-pic {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.left-col section {
+    margin: 20px;
+}
+
+h2{
+    color:darkslateblue;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bolder;
+    font-family: 'Montserrat';
+    font-size: 1.3rem;
+}
+
+h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.left-col p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+ul {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.right-col section {
+    margin: 0px 10px 0px 10px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.experiance,
+.education {
+    display: flex;
+}
+
+.period {
+    width: 10%;
+}
+
+.job {
+    width: 90%;
+    line-height: 1.2;
+}
+
+.job h1 {
+    color: black;
+    padding: 0px;
+}
+
+.job p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: normal;
+    font-style: oblique
+}
+
+.period {
+    text-align: left;
+}
+
+.experiance h1, .education h1 {
+    font-size: 18px;
+}
+
+footer {
+    bottom: 0px;
+    color:darkgrey;
+    font-size: smaller;
+    text-align: justify;
+    position: absolute;
+    margin: 5px 5px;
+    
+}
