@@ -1,3 +1,2 @@
-# cv_html_css
 
-My cv in .html version
+https://burzamiszcz.github.io/cv-html-version/
