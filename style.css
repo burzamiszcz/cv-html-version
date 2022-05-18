@@ -6,7 +6,7 @@ body {
 .paper-page {
     background-color: whitesmoke;
     width: 960px;
-    height: 1300px;
+    height: 1240px;
     margin: 30px auto 30px auto;
     display: flex;
     flex-direction: column;
@@ -132,7 +132,7 @@ footer {
 }
 
 .cv-download {
-    border: 1.5px solid black;
+    border: 1px solid black;
     color: whitesmoke;
     text-decoration: none;
     background-color: darkslateblue;
@@ -141,8 +141,9 @@ footer {
     padding: 10px;
     font-family: 'Montserrat';
     font-weight: bolder;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.4s, color 0.4s;
     font-size: 12px;
+    /* box-shadow: 0px 0px 2px black; */
 }
 
 .cv-download:hover {
@@ -156,3 +157,19 @@ footer {
     color:darkslateblue;
     background-color: whitesmoke;
 }
+
+/* Print page options */
+
+/* .cv-download{
+    display: none;
+}
+
+.paper-page{
+    box-shadow: none;
+    margin: 0px;
+    height: 1240px
+}
+
+body{
+    margin: 0px;
+} */
