@@ -76,6 +76,10 @@ h3{
     font-weight: normal;
 }
 
+a{
+    color: blue;
+}
+
 ul {
     margin-top: 0px;
     margin-bottom: 10px;
@@ -203,7 +207,7 @@ footer {
 .paper-page{
     box-shadow: none;
     margin: 0px;
-    height: 1240px
+    height: 1240px /*1355px for chrome print with link
 }
 
 body{
