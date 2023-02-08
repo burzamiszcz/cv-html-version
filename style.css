@@ -52,7 +52,16 @@ main {
 }
 
 .left-col section {
-    margin: 20px;
+    margin: 20px 10px 20px 20px;
+}
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+}
+.contact-section .elem{
+    margin: 2px;
+
 }
 
 h2{
@@ -207,7 +216,7 @@ footer {
 .paper-page{
     box-shadow: none;
     margin: 0px;
-    height: 1355px /*1355px for chrome print with link
+    height: 1355px
 }
 
 body{

@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
     </head>
+
+
     <body>
         <div class="paper-page">
             <header>
@@ -31,15 +33,16 @@
                         <h3>Skills:</h3>
                         <h2>Technical:</h2>
                         <ul>
-                            <li>Python</li>
+                            <li>Python (Flask, Django, Pandas, Matplotlib, TensorFlow, NumPy etc.)</li>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>SQL and relational databases</li>
-                            <li>Git</li>
-                            <li>Windows Server</li>
+                            <li>Visual Studio Code</li>
+                            <li>Git & GitHub</li>
+                            <li>MS Office Excel</li>
                             <li>PowerShell</li>
                             <li>Network administration</li>
-                            <li>MS Office Excel</li>
+                            <li>Windows Server</li>
                         </ul>
                         <h2>Interpersonal:</h2>
                         <ul>
@@ -69,7 +72,7 @@
                     <h2 style="padding: 1px 0px 10px 10px;">Experience</h2>
                     <div>
                     <h3>Capgemini, Poland</h1>
-                        <h4>4 months</h4>
+                        <h4><span id="monthNumber"></span> months</h4>
                     <section>
                             <div class="line">
                                 <div class="lineinside">
@@ -82,7 +85,7 @@
                                         <h1>Junior Developer</h1>
                                         <h4>2022-10 - now</h4>
                                         <ul>
-                                            <li>Process automation using Python (pyautogui)</li>
+                                            <li>Process automation using Python</li>
                                             <li>Database management</li>
                                         </ul>
                                     </div>
@@ -106,7 +109,7 @@
                                     <h4>01-2021 - 10-2022</h4>
                                     <ul>
                                         <li>Preparation and training of the AI model (Python, Pandas, NumPy, Matplotlib, TensorFlow)</li>
-                                        <li>Development web applications for plant's need (Python, Flask, SQLite)</li>
+                                        <li>Development web applications for plant's need (Python, Flask, Django, SQLite)</li>
                                         <li>Write scripts for automation (Python, Powershell)</li>
                                         <li>Data management (SQL)</li>
                                         <li>Network administration</li>    
@@ -140,7 +143,7 @@
                                         <h4>05-2018 - 10-2018</h4>
                                         <ul>
                                             <li>Warehouse documentation maintanance (Excel)</li>
-                                            <li>Data processing and analysis (Excel)</li>
+                                            <li>Data processing and analysis (Excel, Python)</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -186,4 +189,12 @@
             </main>
         </div>
     </body>
+    <script>
+        const startDate = new Date(2022, 9, 1);
+        const endDate = new Date();
+        const diffTime = Math.abs(endDate - startDate);
+        const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
+        
+        document.getElementById("monthNumber").innerHTML = diffMonths;
+    </script>
 </html>
