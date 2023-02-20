@@ -10,7 +10,7 @@ body {
     margin: 30px auto 30px auto;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.30)
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.30);
 }
 
 header {
@@ -222,3 +222,22 @@ footer {
 body{
     margin: 0px;
 } */
+
+body {
+	background: linear-gradient(-45deg, #23a5d572, #fbfbfb6c, #23a5d572, #ffffff);
+	background-size: 400% 400%;
+	animation: gradient 25s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
