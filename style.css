@@ -1,6 +1,8 @@
 body {
     background-color: rgb(224, 220, 220);
     font-family: 'Montserrat';
+    text-rendering: optimizeLegibility; 
+
 }
 
 .paper-page {
