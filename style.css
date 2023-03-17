@@ -1,8 +1,24 @@
+
+
 body {
     background-color: rgb(224, 220, 220);
     font-family: 'Montserrat';
     text-rendering: optimizeLegibility; 
     -webkit-font-smoothing: antialiased;
+    margin: 0px;
+}
+
+.print-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.print-hover:hover header{
+    background-color: green;
 }
 
 .paper-page {
@@ -212,19 +228,19 @@ footer {
 }
 
 
-/* .cv-download{
+.cv-download.print{
     display: none;
 }
 
-.paper-page{
+.paper-page.print{
     box-shadow: none;
     margin: 0px;
     height: 1355px
 }
 
-body{
+body.print{
     margin: 0px;
-} */
+}
 
 body {
 	background: linear-gradient(-45deg, #23a5d572, #fbfbfb6c, #23a5d572, #ffffff);
