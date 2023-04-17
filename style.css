@@ -24,7 +24,9 @@ body {
 .paper-page {
     background-color: whitesmoke;
     width: 960px;
-    height: 1240px;
+    /* height: 1240px; */
+    height: 1355px;
+
     margin: 30px auto 30px auto;
     display: flex;
     flex-direction: column;
@@ -50,27 +52,27 @@ main {
 }
 
 .left-col {
-    width: 25%;
+    width: 22%;
     background-color: rgb(228, 226, 226);
     font-family: 'Calibri Light';
 }
 
 .right-col {
-    width: 75%;
+    width: 80%;
     color: black;
     font-family: 'Calibri Light';
     position: relative;
 }
 
 .profile-pic {
-    max-width: 80%;
+    max-width: 90%;
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 .left-col section {
-    margin: 20px 10px 20px 20px;
+    margin: 10px 10px 10px 15px;
 }
 
 .contact-section{
@@ -111,8 +113,13 @@ ul {
     margin-top: 0px;
     margin-bottom: 10px;
     list-style-type: "- ";
-    padding: 0px 20px;
+    padding: 0px 0px 0px 10px ;
 }
+
+li {
+    margin: 4px;
+}
+
 
 .right-col h3{
     font-size: 18px;
