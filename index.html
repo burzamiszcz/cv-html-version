@@ -1,228 +1,143 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hubert Burzyński - CV</title>
-        <link rel="stylesheet" href="style.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
-    </head>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/6015f6d8cd.js" crossorigin="anonymous"></script>
 
-
-    <body>
-        <div id="print-hover" class="print-hover"></div>
-        <div class="paper-page">
-            <header>
-                <h1>Hubert Burzyński</h1>
-                <a class="cv-download" href="cv-download.pdf" download="Hubert-Burzyński-CV">Download .pdf</a>
-            </header>
-            <main>
-                <div class="left-col">
-                        <img class="profile-pic" src="profile.jpg"/>
-                    <section>
-                        <h2>Personal data:</h2>
-                        <h3>Date of birth:</h3>
-                        <p>02 January 1999y.</p>
-                    </section>
-                    <section>
-                        <h3>E-mail:</h3>
-                        <a href="mailto:burzynskihubert@gmail.com">burzynskihubert@gmail.com</a>
-                        <h3 style="margin-top: 9px">Phone number:</h3>
-                        <a href="phone:+48782784335">+48 782 784 335</a>
-                        <h3 style="margin-top: 9px">GitHub:</h3>
-                        <a href="https://github.com/burzamiszcz">github.com/burzamiszcz</a>
-                    </section>
-                    <section>
-                        <h3>Skills:</h3>
-                        <h2>Technical:</h2>
-                        <ul>
-                            <li>Python (Flask, Django, Pandas, Matplotlib, TensorFlow, NumPy etc.)</li>
-                            <li>HTML, CSS, JavaScript</li>
-                            <li>SQL, relational databases and unrelational databases (MySQL, PostgreSQL, MongoDB)</li>
-                            <li>Docker</li>
-                            <li>Git & GitHub</li>
-                            <li>Visual Studio Code</li>
-                            <li>MS Office Excel</li>
-                            <li>HTTP</li>
-                            <li>PowerShell</li>
-                        </ul>
-                        <h2>Interpersonal:</h2>
-                        <ul>
-                            <li>communicativeness</li>
-                            <li>ability to work in a team</li>
-                            <li>creativity</li>
-                            <li>coping with stress</li>
-                            <li>candidness</li>
-                        </ul>
-                        <h2>Languages:</h2>
-                        <ul>
-                            <li>Polish native</li>
-                            <li>English B2</li>
-                        </ul>
-                    </section>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="profile">
+                <img src="/profile.jpg"/>
+            </div>
+            <div class="information">
+                <div class="personal">
+                    <h1>Hubert Burzyński</h1>
+                    <h2>Software Developer</h2>
                 </div>
-                <div class="right-col">
-                    <section>
-                        <p>
-                            As an aspiring professional in the field of computer science, I possess a diverse skill set that includes expertise in AI, ML, and web application development using Django and Flask. With a strong foundation in Python, CSS, HTML, and SQL, I am capable of designing and implementing complex software solutions. I have a solid foundation in algorithms and AI methods, which enables me to effectively develop  solutions.
-                            As an extrovert, I possess strong communication skills and can easily connect with people.
-                            <br>
-                            Additionally, I work with adults and children as an illusionist during various events.</p>
-                    </section>
-                    <h2 style="padding: 1px 0px 10px 10px;">Experience</h2>
+                <div class="contact">
                     <div>
-                    <h3>Capgemini, Poland</h1>
-                        <h4><span id="monthNumber"></span> months</h4>
-                    <section>
-                            <div class="line">
-                                <div class="lineinside">
-                                    
-                                </div>
-                            </div>
-                            <div class="one-company">
-                                <div class="experience">
-                                    <div class="job">
-                                        <h1>Software Developer</h1>
-                                        <h4>2022-10 - now</h4>
-                                        <ul>
-                                            <li>Manage the production of reports necessary for a seamless mass migration of O365 
-                                                (about 320,000 mailboxes to M365 ExO in 68 countries) in the banking sector. 
-                                                Gathering the necessary data to update the databases having around 92GB of data and automating this process 
-                                                for optimization and exclusion of mistakes. <i>(Python, Powershell, MySQL)</i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                    </section>
-                    <div class="line2"></div>
-
-                    <h3>BOSCH, Wrocław</h1>
-                    <h4>1 year 9 months</h4>
-                    <section>
-                        <div class="line">
-                            <div class="lineinside">
-                                
-                            </div>
+                        
+                        <div class="contact-elem">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+48782784335">+48 782 784 335</a>
                         </div>
-                        <div class="one-company">
-                            <div class="experience">
-                                <div class="job">
-                                    <h1>Junior IT and process digitalization specialist</h1>
-                                    <h4>01-2022 - 10-2022</h4>
-                                    <ul>
-                                        <li>Prepare, train and implement the AI model on the production line to detect defevtive production components 
-                                            <i>(Python, Pandas, NumPy, Matplotlib, TensorFlow)</i></li>
-                                        <li>Development web app to support the student internship billing system 
-                                            and web app for real-time logistical support of the plant milkrunner 
-                                            <i>(Python, Flask, Django, SQLite, Docker, PostgreSQL, RestAPI, JSON, JavaScript, Sockets)</i></li>
-                                        <li>Write scripts for automation generation of daily reports,
-                                            scripts for sorting/searching files <i>(Python, Powershell)</i>
-                                        </li>
-                                        <li>Plant database management and migration of the database
-                                            with about 8 milion records along with the generation of reports for this data, 
-                                            and create API for data searching <i>(SQL)</i> </li>
-                                        <li>Network administration, storages and switches installation</li>    
-                                        <li>Maintenance of servers responsible for data processing </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="experience">
-                                <div class="job">
-                                    <h1>IT Intern</h1>
-                                    <h4>02-2021 - 01-2022</h4>
-                                    
-                                </div>
-                            </div>
+                        <div class="contact-elem">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Wrocław
                         </div>
-                    </section>
-                    <div class="line2"></div>
-                    <h3>Castorama, Częstochowa</h1>
-                        <h4>6 months</h4>
-                    <section>
-                            <div class="line">
-                                <div class="lineinside">
-                                    
-                                </div>
-                            </div>
-                            <div class="one-company">
-                                <div class="experience">
-                                    <div class="job">
-                                        <h1>Logistics sector employee</h1>
-                                        <h4>05-2018 - 10-2018</h4>
-                                        <ul>
-                                            <li>Warehouse documentation maintanance (Excel)</li>
-                                            <li>Data processing and analysis (Excel, Python)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                    </section>
-                    
                     </div>
-                    <h2 style="padding: 25px 0px 10px 10px;">Education</h2>
-                    <h3 style="margin-bottom: 10px">University of Technology, Wrocław</h1>
-                    <section>
-                            <div class="line">
-                                <div class="lineinside">
-                                    
-                                </div>
-                            </div>
-                            <div class="one-company">
-                                
-                                <div class="experience">
-                                    <div class="job">
-                                        <h1>Master Studies, Applied Computer Science</h1>
-                                        <h4>2022-12 - now</h4>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 15px" class="experience">
-                                    <div class="job">
-                                        <h1>Engineer, Systems Engineering</h1>
-                                        <h4>2018-10 - 2022-01</h4>
-                                    </div>
-                                </div>
-                            </div>
-                    </section>
-
-                    <footer>
-                        I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the 
-                        Personal  Data  Protection  Act  of  10  May  2018  (Journal  of  Laws  2018,  item  1000)  and  in  agreement  with  Regulation  (EU) 
-                        2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard 
-                        to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data 
-                        Protection Regulation)  
-                    </footer>
+                    <div>
+                        <div class="contact-elem">
+                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                            <a href="mailto: burzynskihubert@gmail.com">burzynskihubert@gmail.com</a>
+                        </div>
+                        <div class="contact-elem">
+                            <i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/burzamiszcz">github.com/burzamiszcz</a>
+                        </div>
+                    </div>
                 </div>
-
-
-            </main>
-            
-        </div>
-    </body>
-    <script>
-        const startDate = new Date(2022, 9, 1);
-        const endDate = new Date();
-        const diffTime = Math.abs(endDate - startDate);
-        const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
-        
-        document.getElementById("monthNumber").innerHTML = diffMonths;
+            </div>
+        </header>
+        <main>
+            <div class="left-col">
+                <section>
+                    <h1>Skills</h1>
+                    <ul>
+                        <li>Python (Flask, Django)</li>
+                        <li>HTML, CSS</li>
+                        <li>SQL, MySQL, PostgreSQL, MongoDB</li>
+                        <li>Docker</li>
+                        <li>Git & GitHub</li>
+                        <li>MS Office Excel</li>
+                        <li>HTTP</li>
+                    </ul>
+                </section>
+                <hr>
+                <section>
+                    <h1>Languages</h1>
+                    <div class="languages-container">
+                        <div class="languages">
+                            <p>Polish</p>
+                            <p>English</p>
+                        </div>
+                        <div class="languages-level">
+                            <p>Native</p>
+                            <p>B2</p>
+                        </div>
+                    </div>
+                </section>
+                <hr>
+                <section>
+                    <h1>Education</h1>
+                    <div class="studies">
+                        <h3>2022 - Now</h3>
+                        <h4>Master Degree, 
+                            Applied Computer Science</h4>
+                        <h3>Politechnika Wrocławska</h3>
+                    </div>
+                    <div class="studies">
+                        <h3>2018 - 2022</h3>
+                        <h4>Engineering Degree,
+                            Systems Engineering</h4>
+                        <h3>Politechnika Wrocławska</h3>
+                    </div>
+                </section>
+                <hr>
+                <section>
+                    <h1>Certifications</h1>
+                    <div onclick="window.location.href = 'https://www.coursera.org/account/accomplishments/certificate/5PXSPT6EKSMC'" class="cert">META | Django Web Framework</div>
+                    <div onclick="window.location.href = 'https://coursera.org/share/d21a446a79b73ef3b3180fbadf568640'" class="cert">META | Version Control</div>
+                </section>
+                
+            </div>
+            <div class="right-col">
+                <section>
+                    <h1>About me</h1>
+                    <a>I'm a skilled computer scientist with expertise in AI, ML, and web app development using Django and Flask. I can design and implement complex software solutions using Python, CSS, HTML, and SQL. With a solid foundation in algorithms and AI methods, I'm capable of developing effective solutions. As an extrovert, I'm a great communicator and connect well with people. Plus, I also work as an illusionist at events for both adults and children.</a>
+                </section>
+                <section>
+                    <h1>Experience</h1>
+                    <div class="experience">
+                        <h2>2022/10 - Now (8 Months)</h2>
+                        <h3>Software Developer | Capgemini</h3>
+                        <ul>
+                            <li>Manage the production of reports in the banking sector.</li>
+                            <li>Gathering the necessary data to update the databases</li>
+                        </ul>
+                    </div>
+                    <div class="experience">
+                        <h2>2021/02 - 2022/10 (1 Year 9 Months)</h2>
+                        <h3>Junior Developer | BOSCH</h3>
+                        <ul>
+                            <li>Prepare, train and implement the AI model on the production line to detect defective production components.</li>
+                            <li>Development web app to support the student internship billing system</li>
+                            <li>Write scripts for automation generation of daily reports</li>
+                        </ul>
+                    </div>
+                    <div class="experience">
+                        <h2>2018/05 - 2018/10 (6 Moths)</h2>
+                        <h3>Logistic Sector Employee | Castorama</h3>
+                        <ul>
+                            <li>Warehouse documentation maintanance.</li>
+                            <li>Data processing and analysis.</li>
+                        </ul>
+                    </div>
+                </section>
+            <div class="rodo">
+                <p>I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)</p>
+            </div>
+            </div>
+        </main>
     
-    
-    var printHover = document.getElementById("print-hover")
-    var cvDownload = document.querySelector(".cv-download")
-    var paperPage = document.querySelector(".paper-page")
-    var body = document.querySelector("body")
-
-    printHover.addEventListener("mouseover", function(){
-        cvDownload.classList.add("print");
-        paperPage.classList.add("print");
-        body.classList.add("print");
-    })
-    printHover.addEventListener("mouseout", function(){
-        cvDownload.classList.remove("print");
-        paperPage.classList.remove("print");
-        body.classList.remove("print");
-    })
-    printHover.addEventListener("click", function(){
-        window.print();
-    })
-    </script>
+    </div>
+</body>
 </html>
