@@ -12,6 +12,9 @@
 
 </head>
 <body>
+
+
+
     <div class="page">
         <header>
             <div class="profile">
@@ -107,7 +110,7 @@
                 <section>
                     <h1>Experience</h1>
                     <div class="experience">
-                        <h2>2022/10 - Now (8 Months)</h2>
+                        <h2>2022/10 - Now (<span id="monthNumber"></span> Months)</h2>
                         <h3>Software Developer | Capgemini</h3>
                         <ul>
                             <li>Manage the production of reports in the banking sector.</li>
@@ -124,7 +127,7 @@
                         </ul>
                     </div>
                     <div class="experience">
-                        <h2>2018/05 - 2018/10 (6 Moths)</h2>
+                        <h2>2018/05 - 2018/10 (6 Months)</h2>
                         <h3>Logistic Sector Employee | Castorama</h3>
                         <ul>
                             <li>Warehouse documentation maintanance.</li>
@@ -139,5 +142,47 @@
         </main>
     
     </div>
+
+<script>
+    const startDate = new Date(2022, 9, 1);
+    const endDate = new Date();
+    const diffTime = Math.abs(endDate - startDate);
+    const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
+    
+    document.getElementById("monthNumber").innerHTML = diffMonths;
+
+
+    var printHover = document.getElementById("print-hover")
+    var cvDownload = document.querySelector(".cv-download")
+    var paperPage = document.querySelector(".paper-page")
+    var body = document.querySelector("body")
+
+    printHover.addEventListener("mouseover", function(){
+        cvDownload.classList.add("print");
+        paperPage.classList.add("print");
+        body.classList.add("print");
+    })
+    printHover.addEventListener("mouseout", function(){
+        cvDownload.classList.remove("print");
+        paperPage.classList.remove("print");
+        body.classList.remove("print");
+    })
+    printHover.addEventListener("click", function(){
+        window.print();
+    })
+</script>
+<script>
+    function updateScale() {
+      const pageElement = document.querySelector('.page');
+      const scaleValue = 0.97 * (window.innerHeight / pageElement.offsetHeight);
+      pageElement.style.transform = `scale(${scaleValue})`;
+    }
+
+    // Initial scale update
+    updateScale();
+
+    // Update scale on window resize
+    window.addEventListener('resize', updateScale);
+  </script>
 </body>
 </html>
