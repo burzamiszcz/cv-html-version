@@ -153,12 +153,12 @@ main .right-col{
 }
 
 main .right-col section{
-    margin: 0 30px;
+    margin: 30px;
     text-align: justify;
 }
 
 main .right-col .experience{
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 main .right-col .experience > *{
@@ -166,9 +166,16 @@ main .right-col .experience > *{
     text-align:left;
 }
 
+main .right-col section h1{
+    margin: 10px 0px;
+}
+
 main .right-col section h2{
     font-size: 17px;
     font-weight: 300;
+}
+main .right-col section a{
+    font-weight: 200;
 }
 main .right-col section h3{
     font-size: 20px;
