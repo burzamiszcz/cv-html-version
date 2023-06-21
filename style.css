@@ -202,3 +202,9 @@ main .right-col .rodo{
     margin-top: auto;
 
 }
+
+@media (max-width: 1000px) {
+    .page{
+        transform-origin: left;
+    }
+}
