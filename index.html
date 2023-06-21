@@ -173,10 +173,17 @@
 </script>
 <script>
     function updateScale() {
-      const pageElement = document.querySelector('.page');
-      const scaleValue = 0.97 * (window.innerHeight / pageElement.offsetHeight);
-      pageElement.style.transform = `scale(${scaleValue})`;
+        const pageElement = document.querySelector('.page');
+        if (window.innerWidth > 1000) {
+            const scaleValue = 0.97 * (window.innerHeight / pageElement.offsetHeight);
+            pageElement.style.transform = `scale(${scaleValue})`;
+        } else {
+            // Reset scale to 1 if width is 1000 or less
+            const scaleValue = 1 * (window.innerWidth / pageElement.offsetWidth);
+            pageElement.style.transform = `scale(${scaleValue})`;
+        }
     }
+
 
     // Initial scale update
     updateScale();

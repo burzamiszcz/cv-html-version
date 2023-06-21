@@ -4,6 +4,7 @@ body {
     background-color:#5959596b;
     font-family: 'Outfit';
     overflow-y: hidden;
+    overflow-x: hidden;
   }
 
 .page {
@@ -205,6 +206,11 @@ main .right-col .rodo{
 
 @media (max-width: 1000px) {
     .page{
-        transform-origin: left;
+        /* display: none; */
+        transform-origin: top left;
+        transform: scale(0);
+    }
+    body{
+
     }
 }
