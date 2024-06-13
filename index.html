@@ -12,9 +12,6 @@
 
 </head>
 <body>
-
-
-
     <div class="page">
         <header>
             <div class="profile">
@@ -22,7 +19,7 @@
             </div>
             <div class="information">
                 <div class="personal">
-                    <h1>Hubert Burzyński</h1>
+                    <h1>Hubert Burzyński <i alt="download me!" id="download-button" class="fa-solid fa-cloud-arrow-down fa-2xs"></i></h1>
                     <h2>Software Developer</h2>
                 </div>
                 <div class="contact">
@@ -59,9 +56,10 @@
                         <li>HTML, CSS</li>
                         <li>SQL, MySQL, PostgreSQL, MongoDB</li>
                         <li>Docker</li>
-                        <li>Git & GitHub</li>
+                        <li>Git & GitHub & GitLab</li>
                         <li>MS Office Excel</li>
                         <li>HTTP</li>
+                        <li>Jira</li>
                     </ul>
                 </section>
                 <hr>
@@ -82,7 +80,7 @@
                 <section>
                     <h1>Education</h1>
                     <div class="studies">
-                        <h3>2022 - Now</h3>
+                        <h3>2022 - 2023</h3>
                         <h4>Master Degree, 
                             Applied Computer Science</h4>
                         <h3>Politechnika Wrocławska</h3>
@@ -108,30 +106,35 @@
                     <a>I'm a skilled computer scientist with expertise in AI, ML, and web app development using Django and Flask. I can design and implement complex software solutions using Python, CSS, HTML, and SQL. With a solid foundation in algorithms and AI methods, I'm capable of developing effective solutions. As an extrovert, I'm a great communicator and connect well with people. Plus, I also work as an illusionist at events for both adults and children.</a>
                 </section>
                 <section>
+                    
                     <h1>Experience</h1>
                     <div class="experience">
-                        <h2>2022/10 - Now (<span id="monthNumber"></span> Months)</h2>
-                        <h3>Software Developer | Capgemini</h3>
+                        <h2>2023/09 - Now (<span id="monthNumber"></span> Months)</h2>
+                        <h3>Sofware Developer | IAV Poland</h3>
+                        <p class="key-technologies">Python, Pandas, Numpy, multiprocessing, Matplotlib, Git/GitLab, Jira</p>
                         <ul>
-                            <li>Manage the production of reports in the banking sector.</li>
-                            <li>Gathering the necessary data to update the databases</li>
+                            <li>Developed a comprehensive and large-scale data analysis, processing and visualization system.</li>
+                            <li>Implemented features, debugged bugs, synchronized with other developers, code reviews etc.</li>
+                        </ul>
+                    </div>
+                    <div class="experience">
+                        <h2>2022/10 - 2023/09 (11 Months)</h2>
+                        <h3>Software Developer | Capgemini</h3>
+                        <p class="key-technologies">Python, Django, pyautogui, Selenium, Git/GitLab, Docker, MySQL, ORM, Jira</p>
+                        <ul>
+                            <li>Developed Django web application for production of reports in the banking sector.</li>
+                            <li>Automated of gathering necessary data to update databases</li>
                         </ul>
                     </div>
                     <div class="experience">
                         <h2>2021/02 - 2022/10 (1 Year 9 Months)</h2>
                         <h3>Junior Developer | BOSCH</h3>
+                        <p class="key-technologies">Python, Django, Flask, Tensorflow, Git/GitHub, Docker, ORM, HTML/CSS/JS</p>
+
                         <ul>
-                            <li>Prepare, train and implement the AI model on the production line to detect defective production components.</li>
-                            <li>Development web app to support the student internship billing system</li>
-                            <li>Write scripts for automation generation of daily reports</li>
-                        </ul>
-                    </div>
-                    <div class="experience">
-                        <h2>2018/05 - 2018/10 (6 Months)</h2>
-                        <h3>Logistic Sector Employee | Castorama</h3>
-                        <ul>
-                            <li>Warehouse documentation maintanance.</li>
-                            <li>Data processing and analysis.</li>
+                            <li>Prepared, trained and implemented the AI model on the production line to detect defective production components.</li>
+                            <li>Developed Django web app to support the student internship billing system</li>
+                            <li>Created Flask API for data searching</li>
                         </ul>
                     </div>
                 </section>
@@ -144,7 +147,7 @@
     </div>
 
 <script>
-    const startDate = new Date(2022, 9, 1);
+    const startDate = new Date(2023, 8, 5);
     const endDate = new Date();
     const diffTime = Math.abs(endDate - startDate);
     const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
@@ -153,17 +156,17 @@
 
 
     var printHover = document.getElementById("print-hover")
-    var cvDownload = document.querySelector(".cv-download")
-    var paperPage = document.querySelector(".paper-page")
+    // var cvDownload = document.querySelector(".cv-download")
+    var paperPage = document.querySelector(".page")
     var body = document.querySelector("body")
 
     printHover.addEventListener("mouseover", function(){
-        cvDownload.classList.add("print");
+        // cvDownload.classList.add("print");
         paperPage.classList.add("print");
         body.classList.add("print");
     })
     printHover.addEventListener("mouseout", function(){
-        cvDownload.classList.remove("print");
+        // cvDownload.classList.remove("print");
         paperPage.classList.remove("print");
         body.classList.remove("print");
     })
@@ -190,6 +193,23 @@
 
     // Update scale on window resize
     window.addEventListener('resize', updateScale);
+
+    document.getElementById('download-button').addEventListener('click', function() {
+        console.log('hehe')
+        var element1 = document.querySelector('.page')
+        var element2 = document.getElementById('download-button')
+        element1.classList.add('download');
+        element2.classList.add('download');
+        document.body.classList.add('download');
+        element1.style.transform = `scale(1)`;
+        window.print()
+        updateScale();
+        element1.classList.remove('download');
+        element2.classList.remove('download');
+        document.body.classList.remove('download');
+
+        }
+      );
   </script>
 </body>
 </html>

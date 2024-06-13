@@ -1,3 +1,16 @@
+@keyframes download-animation{
+    0% {
+        opacity: 50%;
+    }
+    50% {
+        opacity: 100%;
+    
+      }
+    
+    100% {
+        opacity: 50%;
+      }
+    }
 body {
     margin: 0;
     padding: 0;
@@ -7,6 +20,29 @@ body {
     overflow-x: hidden;
   }
 
+.printer-invisible-hover{
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    left: 0;
+    top: 0;
+}
+
+.printer-invisible-hover:hover{
+    background-color: green;
+    .page{
+        background-color: green;
+    }
+}
+#download-button{
+    cursor: pointer;
+    transition: .3s ease color, .3s ease transform;
+    animation: download-animation 1.5s infinite;
+}
+#download-button:hover{
+    transform: scale(1.2);
+}
 .page {
     width: 8.3in;
     height: 11.7in;
@@ -90,14 +126,14 @@ hr{
     border: 1px solid rgba(0, 0, 0, 0.16);
 }
 main .left-col{
-    width: 35%;
+    width: 34%;
     height: 100%;
     background-color: #F3F3F3;
     padding-top: 2px;
 }
 
 main .left-col section{
-    padding: 0px 40px;
+    padding: 0px 35px;
     ;
 }
 main .left-col section h1{
@@ -158,7 +194,7 @@ main .right-col{
 }
 
 main .right-col section{
-    margin: 30px;
+    margin: 20px;
     text-align: justify;
 }
 
@@ -172,11 +208,11 @@ main .right-col .experience > *{
 }
 
 main .right-col section h1{
-    margin: 10px 0px;
+    margin: 0px 0px;
 }
 
 main .right-col section h2{
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 300;
 }
 main .right-col section a{
@@ -187,9 +223,13 @@ main .right-col section h3{
     font-weight: 500;
 
 }
-
+main .right-col .key-technologies{
+    font-size: 13px;
+    font-weight: 400;
+    color: #595959ad;
+}
 main .right-col section ul li{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
 }
 
@@ -213,4 +253,19 @@ main .right-col .rodo{
     body{
 
     }
+}
+
+body.download{
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+.page.download{
+    margin: 0px;
+    transform: scale(1);
+    height: 11.73in;
+}
+
+#download-button.download{
+    display: none;
 }
