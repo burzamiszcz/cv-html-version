@@ -194,7 +194,7 @@ main .right-col{
 }
 
 main .right-col section{
-    margin: 20px;
+    margin: 10px 15px;
     text-align: justify;
 }
 
@@ -203,12 +203,13 @@ main .right-col .experience{
 }
 
 main .right-col .experience > *{
-    margin: 4px;
+    margin: 1px 4px;
     text-align:left;
 }
 
 main .right-col section h1{
     margin: 0px 0px;
+    margin-bottom: 3px;
 }
 
 main .right-col section h2{
@@ -221,10 +222,9 @@ main .right-col section a{
 main .right-col section h3{
     font-size: 20px;
     font-weight: 500;
-
 }
 main .right-col .key-technologies{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     color: #595959ad;
 }
