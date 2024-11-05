@@ -109,7 +109,7 @@
                     
                     <h1>Experience</h1>
                     <div class="experience">
-                        <h2>2023/09 - Now (<span id="monthNumber"></span> Months)</h2>
+                        <h2>2023/09 - Now (<span id="monthNumber"></span>)</h2>
                         <h3>Software Developer | IAV Poland</h3>
                         <p class="key-technologies">Python, Pandas, Numpy, multiprocessing, Matplotlib, Django, CI/CD, Docker, Git/GitLab</p>
                         <ul>
@@ -150,9 +150,23 @@
     const startDate = new Date(2023, 8, 5);
     const endDate = new Date();
     const diffTime = Math.abs(endDate - startDate);
-    const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
-    
-    document.getElementById("monthNumber").innerHTML = diffMonths;
+    const diffMonths = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 30.44));
+
+    const years = Math.floor(diffMonths / 12);
+    const months = diffMonths % 12;
+
+    let displayText = '';
+    if (years > 0) {
+        displayText += years + ' Year' + (years > 1 ? 's' : '');
+    }
+    if (months > 0) {
+        if (years > 0) {
+            displayText += ' ';
+        }
+        displayText += months + ' Month' + (months > 1 ? 's' : '');
+    }
+
+    document.getElementById("monthNumber").innerHTML = displayText;
 
 
     var printHover = document.getElementById("print-hover")
