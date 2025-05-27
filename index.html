@@ -20,7 +20,7 @@
             <div class="information">
                 <div class="personal">
                     <h1>Hubert Burzyński <i alt="download me!" id="download-button" class="fa-solid fa-cloud-arrow-down fa-2xs"></i></h1>
-                    <h2>Software Developer</h2>
+                    <h2>Python Developer</h2>
                 </div>
                 <div class="contact">
                     <div>
@@ -59,7 +59,7 @@
                         <li>Git & GitHub & GitLab</li>
                         <li>MS Office Excel</li>
                         <li>HTTP</li>
-                        <li>Jira</li>
+                        <li>Jira, Confluence</li>
                     </ul>
                 </section>
                 <hr>
@@ -81,7 +81,7 @@
                     <h1>Education</h1>
                     <div class="studies">
                         <h3>2022 - 2023</h3>
-                        <h4>Master Degree, 
+                        <h4>Master's Degree, 
                             Applied Computer Science</h4>
                         <h3>Politechnika Wrocławska</h3>
                     </div>
@@ -103,15 +103,23 @@
             <div class="right-col">
                 <section>
                     <h1>About me</h1>
-                    <a>I'm a skilled computer scientist with expertise in AI, ML, and web app development using Django and Flask. I can design and implement complex software solutions using Python, CSS, HTML, and SQL. With a solid foundation in algorithms and AI methods, I'm capable of developing effective solutions. As an extrovert, I'm a great communicator and connect well with people. Plus, I also work as an illusionist at events for both adults and children.</a>
+                    <a>I'm a computer scientist with experience in AI, machine learning, and web development using Django and Flask. I like solving problems and building useful tools with Python, HTML, CSS, and SQL. I enjoy working with people and explaining technical things in a simple way. In my free time, I also perform as an illusionist at events for kids and adults.</a>
                 </section>
                 <section>
                     
                     <h1>Experience</h1>
                     <div class="experience">
-                        <h2>2023/09 - Now (<span id="monthNumber"></span>)</h2>
-                        <h3>Software Developer | IAV Poland</h3>
-                        <p class="key-technologies">Python, Pandas, Numpy, multiprocessing, Matplotlib, Django, CI/CD, Docker, Git/GitLab</p>
+                        <h2>2025/02 - Now (<span id="monthNumber"></span>)</h2>
+                        <h3>Python Developer | Commerzbank</h3>
+                        <p class="key-technologies">MITM proxy, Git/BitBucket, Azure Cloud, GCP, REST, AI models</p>
+                        <ul>
+                            <li>Developed a Python-based MITM proxy for intercepting and analyzing API traffic between AI models, enabling thorough testing, debugging, and data flow analysis.</li>
+                        </ul>
+                    </div>
+                    <div class="experience">
+                        <h2>2023/09 - 2025/02</h2>
+                        <h3>Python Developer | IAV Poland</h3>
+                        <p class="key-technologies">Pandas, Numpy, multiprocessing, Matplotlib, Django, CI/CD, Docker, Git/GitLab</p>
                         <ul>
                             <li>Developed a comprehensive and large-scale system for data analysis, processing, and visualization using Python.</li>
                             <li>Led the design, development, and deployment of an internal web application using Django for IT equipment inventory management.</li>
@@ -119,17 +127,16 @@
                     </div>
                     <div class="experience">
                         <h2>2022/10 - 2023/09 (12 Months)</h2>
-                        <h3>Software Developer | Capgemini</h3>
-                        <p class="key-technologies">Python, Django, pyautogui, Selenium, Git/GitLab, Docker, MySQL, ORM, Jira</p>
+                        <h3>Python Developer | Capgemini</h3>
+                        <p class="key-technologies">Django, pyautogui, Selenium, Git/GitLab, Docker, MySQL, ORM, Jira</p>
                         <ul>
-                            <li>Developed Django web application for generating reports in the banking sector.</li>
-                            <li>Automated of gathering the necessary data to update the databases</li>
+                            <li>Developed a Django web app for generating banking reports and automated data collection for database updates.</li>
                         </ul>
                     </div>
                     <div class="experience">
                         <h2>2021/02 - 2022/10 (1 Year 9 Months)</h2>
-                        <h3>Junior Developer | BOSCH</h3>
-                        <p class="key-technologies">Python, Django, Flask, Tensorflow, Git/GitHub, CI/CD, Docker, ORM, HTML/CSS/JS</p>
+                        <h3>Junior Python Developer | BOSCH</h3>
+                        <p class="key-technologies">Django, Flask, Tensorflow, Git/GitHub, CI/CD, Docker, ORM, HTML/CSS/JS</p>
 
                         <ul>
                             <li>Prepared, trained and implemented the AI model on the production line for the detection of defective production components.</li>
@@ -147,10 +154,10 @@
     </div>
 
 <script>
-    const startDate = new Date(2023, 8, 5);
+    const startDate = new Date(2025, 1, 1);
     const endDate = new Date();
     const diffTime = Math.abs(endDate - startDate);
-    const diffMonths = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 30.44));
+    const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30.44));
 
     const years = Math.floor(diffMonths / 12);
     const months = diffMonths % 12;
@@ -209,7 +216,6 @@
     window.addEventListener('resize', updateScale);
 
     document.getElementById('download-button').addEventListener('click', function() {
-        console.log('hehe')
         var element1 = document.querySelector('.page')
         var element2 = document.getElementById('download-button')
         element1.classList.add('download');
