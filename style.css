@@ -256,10 +256,7 @@ main .right-col .rodo{
     .page{
         /* display: none; */
         transform-origin: top left;
-        transform: scale(0);
-    }
-    body{
-
+        /* transform: scale(0); */ 
     }
 }
 
