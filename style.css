@@ -45,10 +45,9 @@ body {
 }
 .page {
     width: 8.3in;
-    height: 11.7in;
+    height: 11.68in;
     background-color: white;
     margin: 10px auto;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.452);
     transform-origin: top ;
@@ -134,7 +133,7 @@ main .left-col{
 }
 
 main .left-col section{
-    padding: 0px 35px;
+    padding: 0px 25px;
     ;
 }
 main .left-col section h1{
@@ -186,6 +185,13 @@ main .left-col section .cert{
     font-size: 14px;
     cursor: pointer;
 }
+
+.cert {
+    color: black;            
+    text-decoration: none;   
+    cursor: pointer;         
+}
+
 
 main .right-col{
     width: 65%;
@@ -265,7 +271,7 @@ body.download{
 .page.download{
     margin: 0px;
     transform: scale(1);
-    height: 11.73in;
+    height: 11.68in;
 }
 
 #download-button.download{

@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/6015f6d8cd.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6015f6d8cd.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
 </head>
+
 <body>
     <div class="page">
         <header>
             <div class="profile">
-                <img src="profile.jpg"/>
+                <img src="profile.jpg" />
             </div>
             <div class="information">
                 <div class="personal">
-                    <h1>Hubert Burzyński <i alt="download me!" id="download-button" class="fa-solid fa-cloud-arrow-down fa-2xs"></i></h1>
+                    <h1>Hubert Burzyński <i alt="download me!" id="download-button"
+                            class="fa-solid fa-cloud-arrow-down fa-2xs"></i></h1>
                     <h2>Python Developer</h2>
                 </div>
                 <div class="contact">
                     <div>
-                        
+
                         <div class="contact-elem">
                             <i class="fa-solid fa-phone"></i>
                             <a href="tel:+48782784335">+48 782 784 335</a>
@@ -52,11 +58,11 @@
                 <section>
                     <h1>Skills</h1>
                     <ul>
-                        <li>Python (Flask, Django)</li>
+                        <li>Python (Flask, Django, FastAPI, Numpy, Pandas)</li>
                         <li>HTML, CSS</li>
                         <li>SQL, MySQL, PostgreSQL, MongoDB</li>
                         <li>Docker</li>
-                        <li>Git & GitHub & GitLab</li>
+                        <li>Git, GitLab, BitBucket, GitHub</li>
                         <li>MS Office Excel</li>
                         <li>HTTP</li>
                         <li>Jira, Confluence</li>
@@ -81,7 +87,7 @@
                     <h1>Education</h1>
                     <div class="studies">
                         <h3>2022 - 2023</h3>
-                        <h4>Master's Degree, 
+                        <h4>Master's Degree,
                             Applied Computer Science</h4>
                         <h3>Politechnika Wrocławska</h3>
                     </div>
@@ -95,141 +101,186 @@
                 <hr>
                 <section>
                     <h1>Certifications</h1>
-                    <div onclick="window.location.href = 'https://www.coursera.org/account/accomplishments/certificate/5PXSPT6EKSMC'" class="cert">META | Django Web Framework</div>
-                    <div onclick="window.location.href = 'https://coursera.org/share/d21a446a79b73ef3b3180fbadf568640'" class="cert">META | Git Version Control</div>
+
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/5PXSPT6EKSMC" class="cert"
+                        target="_blank">
+                        META | Django Web Framework
+                    </a>
+
+                    <a href="https://coursera.org/share/d21a446a79b73ef3b3180fbadf568640" class="cert" target="_blank">
+                        META | Git Version Control
+                    </a>
                 </section>
-                
+
             </div>
             <div class="right-col">
                 <section>
                     <h1>About me</h1>
-                    <a>I'm a computer scientist with experience in AI, machine learning, and web development using Django and Flask. I like solving problems and building useful tools with Python, HTML, CSS, and SQL. I enjoy working with people and explaining technical things in a simple way. In my free time, I also perform as an illusionist at events for kids and adults.</a>
+                    <a>I'm a computer scientist with experience in AI, machine learning, and web development using
+                        Django Flask and FastAPI. I like solving problems and building useful tools with Python. I enjoy
+                        working with people and explaining technical things in a simple way. In my free time, I also
+                        perform as an illusionist at events for kids and adults.</a>
                 </section>
                 <section>
-                    
+
                     <h1>Experience</h1>
                     <div class="experience">
                         <h2>2025/02 - Now (<span id="monthNumber"></span>)</h2>
                         <h3>Python Developer | Commerzbank</h3>
-                        <p class="key-technologies">MITM proxy, FastAPI, PostgreSQL, Git/BitBucket, Azure Cloud, GCP, REST, AI models</p>
+                        <p class="key-technologies">MITM proxy, FastAPI, PostgreSQL, Git/BitBucket, Azure Cloud, GCP,
+                            REST, AI models</p>
                         <ul>
-                            <li>Developed a Python-based MITM proxy for intercepting and analyzing API traffic between AI models, enabling thorough testing, debugging, and data flow analysis.</li>
+                            <li>Python-based MITM proxy for intercepting and analyzing AI model API traffic, with
+                                FastAPI file hub for multimodal data exchange; enabled testing, debugging, and
+                                end-to-end flow analysis in a distributed Azure & GCP environment.</li>
                         </ul>
                     </div>
                     <div class="experience">
                         <h2>2023/09 - 2025/02 (1 Year 6 Months)</h2>
                         <h3>Python Developer | IAV Poland</h3>
-                        <p class="key-technologies">Pandas, Numpy, multiprocessing, Matplotlib, Django, CI/CD, Docker, Git/GitLab</p>
+                        <p class="key-technologies">Pandas, Numpy, multiprocessing, Matplotlib, Django, CI/CD, Docker,
+                            Git/GitLab</p>
                         <ul>
-                            <li>Developed a comprehensive and large-scale system for data analysis, processing, and visualization using Python.</li>
-                            <li>Led the design, development, and deployment of an internal web application using Django for IT equipment inventory management.</li>
+                            <li>Developed a comprehensive and large-scale system for data analysis, processing, and
+                                visualization using Python.</li>
+                            <li>Led the design, development, and deployment of an internal web application using Django
+                                for IT equipment inventory management.</li>
                         </ul>
                     </div>
                     <div class="experience">
                         <h2>2022/10 - 2023/09 (1 Year)</h2>
                         <h3>Python Developer | Capgemini</h3>
-                        <p class="key-technologies">Django, pyautogui, Selenium, Git/GitLab, Docker, MySQL, ORM, Jira</p>
+                        <p class="key-technologies">Django, pyautogui, Selenium, Git/GitLab, Docker, MySQL, ORM, Jira
+                        </p>
                         <ul>
-                            <li>Developed a Django web app for generating banking reports and automated data collection for database updates.</li>
+                            <li>Developed a Django web app for generating banking reports and automated data collection
+                                for database updates.</li>
                         </ul>
                     </div>
                     <div class="experience">
                         <h2>2021/02 - 2022/10 (1 Year 9 Months)</h2>
                         <h3>Junior Python Developer | BOSCH</h3>
-                        <p class="key-technologies">Django, Flask, Tensorflow, Git/GitHub, CI/CD, Docker, ORM, HTML/CSS/JS</p>
+                        <p class="key-technologies">Django, Flask, Tensorflow, Git/GitHub, CI/CD, Docker, ORM,
+                            HTML/CSS/JS</p>
 
                         <ul>
-                            <li>Prepared, trained and implemented the AI model on the production line for the detection of defective production components.</li>
-                            <li>Developed a Django web application to facilitate the student internship billing system.</li>
+                            <li>Prepared, trained and implemented the AI model on the production line for the detection
+                                of defective production components.</li>
+                            <li>Developed a Django web application to facilitate the student internship billing system.
+                            </li>
                             <li>Created Flask API for efficient data searching capabilities.</li>
                         </ul>
                     </div>
                 </section>
-            <div class="rodo">
-                <p>I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)</p>
-            </div>
+                <div class="rodo">
+                    <p>I agree to the processing of personal data provided in this document for realising the
+                        recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws
+                        2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and
+                        of the Council of 27 April 2016 on the protection of natural persons with regard to the
+                        processing of personal data and on the free movement of such data, and repealing Directive
+                        95/46/EC (General Data Protection Regulation)</p>
+                </div>
             </div>
         </main>
-    
+
     </div>
 
-<script>
-    const startDate = new Date(2025, 1, 1);
-    const endDate = new Date();
-    const diffTime = Math.abs(endDate - startDate);
-    const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30.44));
 
-    const years = Math.floor(diffMonths / 12);
-    const months = diffMonths % 12;
+    <script>
+        const startDate = new Date(2025, 1, 1);
+        const endDate = new Date();
+        const diffTime = Math.abs(endDate - startDate);
+        const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30.44));
 
-    let displayText = '';
-    if (years > 0) {
-        displayText += years + ' Year' + (years > 1 ? 's' : '');
-    }
-    if (months > 0) {
+        const years = Math.floor(diffMonths / 12);
+        const months = diffMonths % 12;
+
+        let displayText = '';
         if (years > 0) {
-            displayText += ' ';
+            displayText += years + ' Year' + (years > 1 ? 's' : '');
         }
-        displayText += months + ' Month' + (months > 1 ? 's' : '');
-    }
-
-    document.getElementById("monthNumber").innerHTML = displayText;
-
-
-    var printHover = document.getElementById("print-hover")
-    // var cvDownload = document.querySelector(".cv-download")
-    var paperPage = document.querySelector(".page")
-    var body = document.querySelector("body")
-
-    printHover.addEventListener("mouseover", function(){
-        // cvDownload.classList.add("print");
-        paperPage.classList.add("print");
-        body.classList.add("print");
-    })
-    printHover.addEventListener("mouseout", function(){
-        // cvDownload.classList.remove("print");
-        paperPage.classList.remove("print");
-        body.classList.remove("print");
-    })
-    printHover.addEventListener("click", function(){
-        window.print();
-    })
-</script>
-<script>
-    function updateScale() {
-        const pageElement = document.querySelector('.page');
-        if (window.innerWidth > 1000) {
-            const scaleValue = 0.97 * (window.innerHeight / pageElement.offsetHeight);
-            pageElement.style.transform = `scale(${scaleValue})`;
-        } else {
-            // Reset scale to 1 if width is 1000 or less
-            const scaleValue = 1 * (window.innerWidth / pageElement.offsetWidth);
-            pageElement.style.transform = `scale(${scaleValue})`;
+        if (months > 0) {
+            if (years > 0) {
+                displayText += ' ';
+            }
+            displayText += months + ' Month' + (months > 1 ? 's' : '');
         }
-    }
+
+        document.getElementById("monthNumber").innerHTML = displayText;
 
 
-    // Initial scale update
-    updateScale();
+        var printHover = document.getElementById("print-hover")
+        // var cvDownload = document.querySelector(".cv-download")
+        var paperPage = document.querySelector(".page")
+        var body = document.querySelector("body")
 
-    // Update scale on window resize
-    window.addEventListener('resize', updateScale);
+        printHover.addEventListener("mouseover", function () {
+            // cvDownload.classList.add("print");
+            paperPage.classList.add("print");
+            body.classList.add("print");
+        })
+        printHover.addEventListener("mouseout", function () {
+            // cvDownload.classList.remove("print");
+            paperPage.classList.remove("print");
+            body.classList.remove("print");
+        })
+        printHover.addEventListener("click", function () {
+            window.print();
+        })
+    </script>
 
-    document.getElementById('download-button').addEventListener('click', function() {
-        var element1 = document.querySelector('.page')
-        var element2 = document.getElementById('download-button')
-        element1.classList.add('download');
-        element2.classList.add('download');
-        document.body.classList.add('download');
-        element1.style.transform = `scale(1)`;
-        window.print()
+    <script>
+        function updateScale() {
+            const pageElement = document.querySelector('.page');
+            if (window.innerWidth > 1000) {
+                const scaleValue = 0.97 * (window.innerHeight / pageElement.offsetHeight);
+                pageElement.style.transform = `scale(${scaleValue})`;
+            } else {
+                // Reset scale to 1 if width is 1000 or less
+                const scaleValue = 1 * (window.innerWidth / pageElement.offsetWidth);
+                pageElement.style.transform = `scale(${scaleValue})`;
+            }
+        }
+
+        // Initial scale update
         updateScale();
-        element1.classList.remove('download');
-        element2.classList.remove('download');
-        document.body.classList.remove('download');
+
+        // Update scale on window resize
+        window.addEventListener('resize', updateScale);
+        const startYear = 2020;
+        const currentYear = new Date().getFullYear();
+        const x = currentYear - startYear; // np. 5
+        const filename = `Hubert-Burzynski-Python-Developer-${x}y-exp.pdf`;
+
+
+        document.getElementById('download-button').addEventListener('click', function () {
+            var element1 = document.querySelector('.page')
+            var element2 = document.getElementById('download-button')
+            element1.classList.add('download');
+            element2.classList.add('download');
+            document.body.classList.add('download');
+            element1.style.transform = `scale(1)`;
+            const element = document.querySelector(".page"); // możesz zmienić np. na #content
+            html2pdf().from(element).save();
+            html2pdf()
+                .set({
+                    margin: 0,
+                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+                    filename: filename
+                })
+                .from(document.querySelector('.page'))
+                .save()
+                .then(() => {
+                    // przywracanie stanu po zakończeniu zapisu
+                    element1.classList.remove('download');
+                    element2.classList.remove('download');
+                    document.body.classList.remove('download');
+                    updateScale();
+                });
 
         }
-      );
-  </script>
+        );
+    </script>
 </body>
+
 </html>
