@@ -261,7 +261,6 @@
             document.body.classList.add('download');
             element1.style.transform = `scale(1)`;
             const element = document.querySelector(".page"); // możesz zmienić np. na #content
-            html2pdf().from(element).save();
             html2pdf()
                 .set({
                     margin: 0,
