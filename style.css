@@ -20,6 +20,10 @@ body {
     overflow-x: hidden;
   }
 
+.light { font-family: "OutfitLight", sans-serif; }
+.regular { font-family: "OutfitRegular", sans-serif; }
+.medium { font-family: "OutfitMedium", sans-serif; }
+
 .printer-invisible-hover{
     position: fixed;
     width: 10px;
@@ -81,12 +85,14 @@ header{
     font-size: 48px;
     margin: 0px;
     font-weight: 600;
+    font-family: 'OutfitBold', 'Outfit';
 
 }
 
 .information h2{
     font-size: 28px;
     font-weight: 400;
+    font-family: 'OutfitRegular', 'Outfit';
     color: #595959;
     margin: 0px;
 
@@ -106,11 +112,20 @@ header{
 
 .information .contact .contact-elem{
     padding: 5px 10px 0px 0px;
+    font-family: 'OutfitRegular', 'Outfit';
+    display: flex;
+    align-items: center;
+}
+
+.information .contact .contact-elem img{
+
+    margin-right: 10px;
 }
 
 .information .contact .contact-elem a, a:active, a:link{
     text-decoration: none;
     color: black;
+    font-family: 'OutfitRegular', 'Outfit';
 }
 .information .contact .contact-elem i{
     margin-right: 10px;
@@ -121,9 +136,11 @@ main {
     width: 100%;
     height: 80%;
 }
-hr{
+#hr{
     width: 75%;
-    border: 1px solid rgba(0, 0, 0, 0.16);
+    height: 2px;
+    background-color: rgb(199, 199, 199);
+    margin: 5px auto;
 }
 main .left-col{
     width: 34%;
@@ -138,12 +155,14 @@ main .left-col section{
 }
 main .left-col section h1{
     font-weight: 500;
+    font-family: 'OutfitMedium', 'Outfit';
 }
 main .left-col section ul {
     padding-inline-start: 20px;
 }
 main .left-col section ul li{
     font-weight: 300;
+    font-family: 'OutfitLight', 'Outfit';
     color: #595959;
     font-size: 17px;
 }
@@ -160,10 +179,15 @@ main .left-col section .languages-container .languages, .languages-level{
 
 main .left-col section .languages-container .languages p, .languages-level p{
     margin: 5px 0px;
+    font-family: 'OutfitRegular', 'Outfit';
 }
 
+main .left-col h4{
+    font-family: 'OutfitBold', 'Outfit';
+}
 main .left-col section .languages-container .languages{
     font-weight: 300;
+    font-family: 'OutfitLight', 'Outfit';
 }
 
 main .left-col section .studies{
@@ -178,6 +202,7 @@ main .left-col section .studies > * {
 
 main .left-col section .studies h3{
     font-weight: 300;
+    font-family: 'OutfitLight', 'Outfit';
 }
 
 main .left-col section .cert{
@@ -217,28 +242,35 @@ main .right-col .experience > *{
 main .right-col section h1{
     margin: 0px 0px;
     margin-bottom: 3px;
+    font-family: 'OutfitBold', 'Outfit';
+
 }
 
 main .right-col section h2{
     font-size: 16px;
     font-weight: 300;
+    font-family: 'OutfitLight', 'Outfit';
 }
 main .right-col section a{
     font-weight: 200;
     font-size: 15px;
+    font-family: 'OutfitExtralight', 'Outfit';
 }
 main .right-col section h3{
     font-size: 20px;
     font-weight: 500;
+    font-family: 'OutfitMedium', 'Outfit';
 }
 main .right-col .key-technologies{
     font-size: 12px;
     font-weight: 400;
+    font-family: 'OutfitRegular', 'Outfit';
     color: #595959ad;
 }
 main .right-col section ul li{
     font-size: 15px;
     font-weight: 300;
+    font-family: 'OutfitLight', 'Outfit';
 }
 
 main .right-col .rodo{
@@ -248,6 +280,8 @@ main .right-col .rodo{
     text-align: justify;
     font-size: 10px;
     font-weight: 200;
+    font-family: 'OutfitExtralight', 'Outfit';
+
     margin-top: auto;
 
 }
@@ -260,6 +294,7 @@ main .right-col .rodo{
     }
 }
 
+
 body.download{
     overflow-y: scroll;
     overflow-x: scroll;
@@ -269,6 +304,7 @@ body.download{
     margin: 0px;
     transform: scale(1);
     height: 11.68in;
+    box-shadow: none;
 }
 
 #download-button.download{

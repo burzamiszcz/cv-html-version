@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/6015f6d8cd.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 </head>
 
@@ -20,7 +22,7 @@
     <div class="page">
         <header>
             <div class="profile">
-                <img src="profile.jpg" />
+                <img src="images/profile.jpg" />
             </div>
             <div class="information">
                 <div class="personal">
@@ -32,21 +34,21 @@
                     <div>
 
                         <div class="contact-elem">
-                            <i class="fa-solid fa-phone"></i>
+                            <img src="images/phone.jpg" width="18" height="18" alt="phone icon" />
                             <a href="tel:+48782784335">+48 782 784 335</a>
                         </div>
                         <div class="contact-elem">
-                            <i class="fa-solid fa-location-dot"></i>
+                            <img src="images/location.jpg" width="18" height="18" alt="location icon" />
                             Wrocław
                         </div>
                     </div>
                     <div>
                         <div class="contact-elem">
-                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                            <img src="images/envelope.jpg" width="18" height="18" alt="envelop icon" />
                             <a href="mailto: burzynskihubert@gmail.com">burzynskihubert@gmail.com</a>
                         </div>
                         <div class="contact-elem">
-                            <i class="fa-brands fa-github"></i>
+                            <img src="images/github.jpg" width="18" height="18" alt="github icon" />
                             <a href="https://github.com/burzamiszcz">github.com/burzamiszcz</a>
                         </div>
                     </div>
@@ -68,7 +70,7 @@
                         <li>Jira, Confluence</li>
                     </ul>
                 </section>
-                <hr>
+                <div id="hr"></div>
                 <section>
                     <h1>Languages</h1>
                     <div class="languages-container">
@@ -82,7 +84,7 @@
                         </div>
                     </div>
                 </section>
-                <hr>
+                <div id="hr"></div>
                 <section>
                     <h1>Education</h1>
                     <div class="studies">
@@ -98,7 +100,7 @@
                         <h3>Politechnika Wrocławska</h3>
                     </div>
                 </section>
-                <hr>
+                <div id="hr"></div>
                 <section>
                     <h1>Certifications</h1>
 
@@ -186,100 +188,121 @@
     </div>
 
 
-    <script>
-        const startDate = new Date(2025, 1, 1);
-        const endDate = new Date();
-        const diffTime = Math.abs(endDate - startDate);
-        const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30.44));
+<script>
+    const startDate = new Date(2025, 1, 1);
+    const endDate = new Date();
+    const diffTime = Math.abs(endDate - startDate);
+    const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30.44));
 
-        const years = Math.floor(diffMonths / 12);
-        const months = diffMonths % 12;
+    const years = Math.floor(diffMonths / 12);
+    const months = diffMonths % 12;
 
-        let displayText = '';
+    let displayText = '';
+    if (years > 0) {
+        displayText += years + ' Year' + (years > 1 ? 's' : '');
+    }
+    if (months > 0) {
         if (years > 0) {
-            displayText += years + ' Year' + (years > 1 ? 's' : '');
+            displayText += ' ';
         }
-        if (months > 0) {
-            if (years > 0) {
-                displayText += ' ';
-            }
-            displayText += months + ' Month' + (months > 1 ? 's' : '');
+        displayText += months + ' Month' + (months > 1 ? 's' : '');
+    }
+    document.getElementById("monthNumber").innerHTML = displayText;
+</script>
+
+<script type="module">
+    function updateScale() {
+        const pageElement = document.querySelector('.page');
+        if (window.innerWidth > 1000) {
+            const scaleValue = 0.97 * (window.innerHeight / pageElement.offsetHeight);
+            pageElement.style.transform = `scale(${scaleValue})`;
+        } else {
+            const scaleValue = 1 * (window.innerWidth / pageElement.offsetWidth);
+            pageElement.style.transform = `scale(${scaleValue})`;
         }
+    }
 
-        document.getElementById("monthNumber").innerHTML = displayText;
+    // Initial scale update
+    updateScale();
+    window.addEventListener('resize', updateScale);
+    
+    // nazwa pliku z liczeniem doświadczenia
+    const startYear = 2020;
+    const currentYear = new Date().getFullYear();
+    const x = currentYear - startYear;
+    const filename = `Hubert-Burzynski-Python-Developer-${x}y-exp.pdf`;
 
+    import outfitRegular from './fonts-js/Outfit-regular.js';
+    import outfitLight from './fonts-js/Outfit-light.js';
+    import outfitMedium from './fonts-js/Outfit-medium.js';
+    import outfitExtralight from './fonts-js/Outfit-extralight.js';
+    import outfitBold from './fonts-js/Outfit-bold.js';
 
-        var printHover = document.getElementById("print-hover")
-        // var cvDownload = document.querySelector(".cv-download")
-        var paperPage = document.querySelector(".page")
-        var body = document.querySelector("body")
+    document.getElementById('download-button').addEventListener('click', async function () {
+        const { jsPDF } = window.jspdf;
 
-        printHover.addEventListener("mouseover", function () {
-            // cvDownload.classList.add("print");
-            paperPage.classList.add("print");
-            body.classList.add("print");
-        })
-        printHover.addEventListener("mouseout", function () {
-            // cvDownload.classList.remove("print");
-            paperPage.classList.remove("print");
-            body.classList.remove("print");
-        })
-        printHover.addEventListener("click", function () {
-            window.print();
-        })
-    </script>
+        const element1 = document.querySelector('.page');
+        const element2 = document.getElementById('download-button');
 
-    <script>
-        function updateScale() {
-            const pageElement = document.querySelector('.page');
-            if (window.innerWidth > 1000) {
-                const scaleValue = 0.97 * (window.innerHeight / pageElement.offsetHeight);
-                pageElement.style.transform = `scale(${scaleValue})`;
-            } else {
-                // Reset scale to 1 if width is 1000 or less
-                const scaleValue = 1 * (window.innerWidth / pageElement.offsetWidth);
-                pageElement.style.transform = `scale(${scaleValue})`;
-            }
-        }
+        // tymczasowe klasy/skalowanie
+        element1.classList.add('download');
+        element2.classList.add('download');
+        document.body.classList.add('download');
+        element1.style.transform = `scale(1)`;
 
-        // Initial scale update
+        // nowy dokument PDF
+        const doc = new jsPDF({
+            unit: "pt",
+            format: "a4",
+            orientation: "portrait"
+        });
+        
+        doc.addFileToVFS("Outfit-Extralight.ttf", outfitExtralight);
+        doc.addFont("Outfit-Extralight.ttf", "OutfitExtralight", "normal");
+        
+        doc.addFileToVFS("Outfit-Light.ttf", outfitLight);
+        doc.addFont("Outfit-Light.ttf", "OutfitLight", "normal");
+
+        doc.addFileToVFS("Outfit-Regular.ttf", outfitRegular);
+        doc.addFont("Outfit-Regular.ttf", "OutfitRegular", "normal");
+
+        doc.addFileToVFS("Outfit-Medium.ttf", outfitMedium);
+        doc.addFont("Outfit-Medium.ttf", "OutfitMedium", "normal");
+
+        doc.addFileToVFS("Outfit-Bold.ttf", outfitBold);
+        doc.addFont("Outfit-Bold.ttf", "OutfitBold", "normal");
+
+        await doc.html(element1, {
+            callback: function(doc) {
+                const scale = 595/794
+
+                doc.link(25*scale, 1040*scale, 197*scale, 18*scale, { url: "https://www.coursera.org/account/accomplishments/certificate/5PXSPT6EKSMC" });
+
+                doc.link(25*scale, 1060*scale, 163*scale, 18*scale, { url: "https://coursera.org/share/d21a446a79b73ef3b3180fbadf568640" });
+
+                doc.link(506*scale, 183*scale, 189*scale, 18*scale, { url: "www.github.com/burzamiszcz" });
+                
+                doc.link(507*scale, 155*scale, 218*scale, 18*scale, { url: "mailto:burzynskihubert@gmail.com" });
+
+                while(doc.internal.getNumberOfPages() > 1) {
+                    doc.deletePage(doc.internal.getNumberOfPages());
+                }
+
+                doc.save(filename);
+            },
+            x: 0,
+            y: 0,
+            width: 595,
+            windowWidth: 794
+        });
+
+        element1.classList.remove('download');
+        element2.classList.remove('download');
+        document.body.classList.remove('download');
         updateScale();
+    });
+</script>
 
-        // Update scale on window resize
-        window.addEventListener('resize', updateScale);
-        const startYear = 2020;
-        const currentYear = new Date().getFullYear();
-        const x = currentYear - startYear; // np. 5
-        const filename = `Hubert-Burzynski-Python-Developer-${x}y-exp.pdf`;
-
-
-        document.getElementById('download-button').addEventListener('click', function () {
-            var element1 = document.querySelector('.page')
-            var element2 = document.getElementById('download-button')
-            element1.classList.add('download');
-            element2.classList.add('download');
-            document.body.classList.add('download');
-            element1.style.transform = `scale(1)`;
-            const element = document.querySelector(".page"); // możesz zmienić np. na #content
-            html2pdf()
-                .set({
-                    margin: 0,
-                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
-                    filename: filename
-                })
-                .from(document.querySelector('.page'))
-                .save()
-                .then(() => {
-                    // przywracanie stanu po zakończeniu zapisu
-                    element1.classList.remove('download');
-                    element2.classList.remove('download');
-                    document.body.classList.remove('download');
-                    updateScale();
-                });
-
-        }
-        );
-    </script>
 </body>
 
 </html>
